@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="wrapper" style="position:relative">
+    <!-- <div class="wrapper" style="position:relative">
     <div class="tableBox" >
       <div class="showTD">
         <table style="width:80px">
@@ -37,8 +37,8 @@
         </tbody>
       </table>
     </div>
-    </div>
-    <!-- <Ttable></Ttable> -->
+    </div> -->
+    <Ttable></Ttable>
   </div>
 </template>
 
@@ -57,19 +57,19 @@ export default {
     }
   },
   mounted(){
-    document.querySelector('.tableBox').addEventListener('scroll', function(){
-      if(this.scrollLeft>0){
-        document.querySelector('.showCol').classList.add('addShadow');//添加阴影样式
-      }else{
-        document.querySelector('.showCol').classList.remove('addShadow');
-        this.scrollTo(0,this.scrollTop)
-      }
-      if(this.scrollTop<0){
-        this.scrollTo(this.scrollLeft,0)
-      }
-      document.querySelector('.showCol').scrollTo(0,this.scrollTop)
-      document.querySelector('.showTH').scrollTo(this.scrollLeft,0)
-    })
+    // document.querySelector('.tableBox').addEventListener('scroll', function(){
+    //   if(this.scrollLeft>0){
+    //     document.querySelector('.showCol').classList.add('addShadow');//添加阴影样式
+    //   }else{
+    //     document.querySelector('.showCol').classList.remove('addShadow');
+    //     // this.scrollTo(0,this.scrollTop)
+    //   }
+    //   if(this.scrollTop<0){
+    //     this.scrollTo(this.scrollLeft,0)
+    //   }
+    //   document.querySelector('.showCol').scrollTo(0,this.scrollTop)
+    //   document.querySelector('.showTH').scrollTo(this.scrollLeft,0)
+    // })
   }
 }
 </script>

@@ -3,24 +3,24 @@
     <div class="wrapper" style="position:relative;overflow: hidden;height:300px">
       <div class="thBlcok" style="height:41px"></div>
       <div style="display:flex;position:absolute;top:0;left:0">
-        <div style="height:300px;display:inline-block;padding-left:86px"></div>
+        <div style="height:300px;display:inline-block;width:86px;"></div>
         <div class="tableBox">
-            <div style="display:flex">
-          <div class="showTD">
-            <table style="width:86px">
-              <thead>
-                <th>{{title[0]}}</th>
-              </thead>
-            </table>
-          </div>
-          <div class="showTH">
-            <table cellspacing="0">
-              <thead>
-                <th v-for="item in title" :key="item">{{item}}</th>
-              </thead>
-            </table>
-          </div>
-            </div>
+            <!-- <div style="display:flex"> -->
+                <div class="showTD">
+                    <table style="width:86px">
+                    <thead>
+                        <th>{{title[0]}}</th>
+                    </thead>
+                    </table>
+                </div>
+                <div class="showTH">
+                    <table cellspacing="0">
+                    <thead>
+                        <th v-for="item in title" :key="item">{{item}}</th>
+                    </thead>
+                    </table>
+                </div>
+            <!-- </div> -->
           <div class="showCol">
             <table cellspacing="0">
               <thead>
@@ -33,9 +33,14 @@
               </tbody>
             </table>
           </div>
+          <div style="display:flex;flex-direction:column">
+          <!-- <table>
+              <thead>
+              <th v-for="item in title_two" :key="item">{{item}}</th>
+            </thead>
+          </table> -->
           <table id="tab" cellspacing="0">
             <thead>
-                <!-- <th style="height:21px"></th> -->
               <th v-for="item in title_two" :key="item">{{item}}</th>
             </thead>
             <tbody>
@@ -44,6 +49,7 @@
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>
@@ -82,7 +88,7 @@ export default {
         // this.scrollTo(0, this.scrollTop);
       }
       if (this.scrollTop < 0) {
-        // this.scrollTo(this.scrollLeft, 0);
+        this.scrollTo(this.scrollLeft, 0);
       }
       document.querySelector(".showCol").scrollTo(0, this.scrollTop);
       document.querySelector(".showTH").scrollTo(this.scrollLeft, 0);
@@ -94,7 +100,8 @@ export default {
 .Ttable {
   position: relative;
   .tableBox {
-    width: 95vw;
+    width: 307px;
+    // flex: 1;
     height: 300px;
     overflow-y: auto;
     overflow-x: auto;
@@ -160,7 +167,7 @@ export default {
     table {
       table-layout: fixed;
       border: 0;
-      width: 600px;
+      width: 514px;
       th {
         width: 86px;
         padding: 10px 0;
