@@ -2,7 +2,7 @@
   <div class="Ttable">
     <div class="wrapper" style="position:relative;overflow: hidden;height:300px">
       <div class="thBlcok" style="height:41px"></div>
-      <div style="display:flex;position:absolute;top:0;left:0">
+      <div style="display:flex;position:absolute;top:0;left:0;overflow:hidden;width:100%">
         <div style="height:300px;display:inline-block;width:86px;"></div>
         <div class="tableBox">
             <!-- <div style="display:flex"> -->
@@ -99,14 +99,14 @@ export default {
 <style lang="less" scoped>
 .Ttable {
   position: relative;
+  box-shadow: 0px 0px 18px rgb(219, 219, 219);
   .tableBox {
-    width: 307px;
+    width: 312px;
     // flex: 1;
     height: 300px;
     overflow-y: auto;
     overflow-x: auto;
     background: #fff;
-    box-shadow: 3px 3px 10px rgba(204, 204, 204, 0.3);
     &::-webkit-scrollbar-track-piece {
       background-color: rgba(0, 0, 0, 0);
     }
@@ -132,7 +132,7 @@ export default {
       border-radius: 5px;
     }
     .showTD {
-      background: rgb(247, 249, 250);
+      background: rgb(239, 243, 247);
       width: 86px;
       height: 41px;
       position: absolute;
@@ -146,12 +146,12 @@ export default {
       height: 300px;
     }
     .showTH {
-      background: rgb(247, 249, 250);
+      background: rgb(239, 243, 247);
       position: absolute;
       top: 0;
       left: 0;
       z-index: 900;
-      width: 95vw;
+      width: 100%;
       height: 41px;
       overflow: hidden;
     }
@@ -175,7 +175,7 @@ export default {
       tr {
         td {
           width: 86px;
-          border-bottom: 1px solid rgb(233, 237, 240);
+          border-bottom: 1px solid rgb(240, 244, 248);
           padding: 10px 0;
         }
         // &:first-child {
